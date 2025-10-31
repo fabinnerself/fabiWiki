@@ -43,10 +43,31 @@ plugins:
 
 nav:
   - Inicio: index.md
-  - Guías: guias/index.md
-  - Proyectos: proyectos/index.md
-  - Referencias: referencias/index.md
-  - Herramientas: herramientas/index.md
+  - 🚀 Develop:
+    - Guías: DEVELOP/guias/index.md
+    - Proyectos: DEVELOP/proyectos/index.md
+    - Referencias: DEVELOP/referencias/index.md
+    - Herramientas: DEVELOP/herramientas/index.md
+  - 👤 Personal:
+    - Películas & Series: PERSONAL/01-Peliculas-Series/
+    - Libros & Lecturas: PERSONAL/02-Libros-Lecturas/
+    - Videojuegos: PERSONAL/03-Videojuegos/
+    - Hobbies: PERSONAL/04-Hobbies/
+  - 💪 Salud:
+    - Fitness: SALUD/01-Fitness/
+    - Nutrición: SALUD/02-Nutricion/
+    - Mental: SALUD/03-Mental/
+    - Médico: SALUD/04-Medico/
+  - 📊 Productividad:
+    - Metas: PRODUCTIVIDAD/01-Metas/
+    - Tiempo: PRODUCTIVIDAD/02-Tiempo/
+    - Finanzas: PRODUCTIVIDAD/03-Finanzas/
+    - Aprendizaje: PRODUCTIVIDAD/04-Aprendizaje/
+  - 🌎 Conocimiento:
+    - Ciencia: CONOCIMIENTO/01-Ciencia-Tecnologia/
+    - Historia: CONOCIMIENTO/02-Historia-Cultura/
+    - Filosofía: CONOCIMIENTO/03-Filosofia/
+    - Idiomas: CONOCIMIENTO/04-Idiomas-Viajes/
 
 extra:
   social:
