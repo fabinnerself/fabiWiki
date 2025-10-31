@@ -1,12 +1,13 @@
 {
-  "buildCommand": "mkdocs build",
-  "outputDirectory": "site",
-  "installCommand": "pip install -r requirements.txt",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ]
+   "buildCommand": "mkdocs build",
+   "outputDirectory": "site",
+   "installCommand": "python3 -m pip install --user -r requirements.txt",
+   "framework": null,
+   "runtime": "python3.11",
+   "rewrites": [
+     {
+       "source": "/(.*)",
+       "destination": "/$1"
+     }
+   ]
 }
