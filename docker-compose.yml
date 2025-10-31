@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  wiki:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/site
+    environment:
+      - MKDOCS_DEV_ADDR=0.0.0.0:8000
+    command: mkdocs serve --dev-addr 0.0.0.0:8000 --watch /app/docs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
