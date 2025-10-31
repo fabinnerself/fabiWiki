@@ -1,7 +1,6 @@
 {
-   "buildCommand": "mkdocs build",
+   "buildCommand": "python3 -m pip install --user -r requirements.txt && python3 -m mkdocs build",
    "outputDirectory": "site",
-   "installCommand": "python3 -m pip install --user -r requirements.txt",
    "framework": null,
    "rewrites": [
      {
