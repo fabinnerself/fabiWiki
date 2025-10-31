@@ -43,31 +43,88 @@ plugins:
 
 nav:
   - Inicio: index.md
-  - 🚀 Develop:
+  - 🚀 DEVELOP:
     - Guías: DEVELOP/guias/index.md
-    - Proyectos: DEVELOP/proyectos/index.md
-    - Referencias: DEVELOP/referencias/index.md
-    - Herramientas: DEVELOP/herramientas/index.md
-  - 👤 Personal:
-    - Películas & Series: PERSONAL/01-Peliculas-Series/
-    - Libros & Lecturas: PERSONAL/02-Libros-Lecturas/
-    - Videojuegos: PERSONAL/03-Videojuegos/
-    - Hobbies: PERSONAL/04-Hobbies/
-  - 💪 Salud:
-    - Fitness: SALUD/01-Fitness/
-    - Nutrición: SALUD/02-Nutricion/
-    - Mental: SALUD/03-Mental/
-    - Médico: SALUD/04-Medico/
-  - 📊 Productividad:
-    - Metas: PRODUCTIVIDAD/01-Metas/
-    - Tiempo: PRODUCTIVIDAD/02-Tiempo/
-    - Finanzas: PRODUCTIVIDAD/03-Finanzas/
-    - Aprendizaje: PRODUCTIVIDAD/04-Aprendizaje/
-  - 🌎 Conocimiento:
-    - Ciencia: CONOCIMIENTO/01-Ciencia-Tecnologia/
-    - Historia: CONOCIMIENTO/02-Historia-Cultura/
-    - Filosofía: CONOCIMIENTO/03-Filosofia/
-    - Idiomas: CONOCIMIENTO/04-Idiomas-Viajes/
+    - Sistemas-Operativos:
+      - Windows:
+        - Sistema: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/01-Sistema.md
+        - Redes: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/02-Redes/index.md
+        - Procesos: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/03-Procesos/index.md
+        - Archivos: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/04-Archivos/index.md
+        - Programacion: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/05-Programacion/index.md
+        - DevOps: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/06-DevOps/index.md
+        - Seguridad: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/07-Seguridad/index.md
+        - Herramientas: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/08-Herramientas/index.md
+        - Scripting: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/09-Scripting/index.md
+        - Servicios: DEVELOP/01-Sistemas-Operativos/Windows/Comandos/10-Servicios/index.md
+      - Linux:
+        - Comandos:
+          - Sistema: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/01-Sistema.md
+          - Redes: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/02-Redes.md
+          - Paquetes: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/03-Paquetes.md
+          - Procesos: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/04-Procesos.md
+          - Archivos: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/05-Archivos.md
+          - Programacion: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/06-Programacion.md
+          - DevOps: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/07-DevOps.md
+          - Seguridad: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/08-Seguridad.md
+          - Herramientas: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/09-Herramientas.md
+          - Scripting: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/10-Scripting.md
+          - Servicios: DEVELOP/01-Sistemas-Operativos/Linux/Comandos/11-Servicios.md
+        - Distribuciones: DEVELOP/01-Sistemas-Operativos/Linux/Distribuciones/index.md
+        - Programas Instalar: DEVELOP/01-Sistemas-Operativos/Linux/Programas-Instalar/index.md
+        - Configuracion: DEVELOP/01-Sistemas-Operativos/Linux/Configuracion/index.md
+    - Lenguajes-Programacion:
+      - PHP: DEVELOP/02-Lenguajes-Programacion/PHP/Guias.md
+      - JavaScript:
+        - Frontend:
+          - React: DEVELOP/02-Lenguajes-Programacion/JavaScript/Frontend/React.md
+          - Angular: DEVELOP/02-Lenguajes-Programacion/JavaScript/Frontend/Angular.md
+          - Vue: DEVELOP/02-Lenguajes-Programacion/JavaScript/Frontend/Vue.md
+          - EasyUI: DEVELOP/02-Lenguajes-Programacion/JavaScript/Frontend/EasyUI.md
+        - Backend:
+          - NodeJS: DEVELOP/02-Lenguajes-Programacion/JavaScript/Backend/NodeJS.md
+          - Express: DEVELOP/02-Lenguajes-Programacion/JavaScript/Backend/Express.md
+          - Prisma: DEVELOP/02-Lenguajes-Programacion/JavaScript/Backend/Prisma.md
+        - Librerias:
+          - jQuery: DEVELOP/02-Lenguajes-Programacion/JavaScript/Librerias/jQuery.md
+          - ExtJS: DEVELOP/02-Lenguajes-Programacion/JavaScript/Librerias/ExtJS.md
+      - Python:
+        - FastAPI: DEVELOP/02-Lenguajes-Programacion/Python/FastAPI.md
+        - Django: DEVELOP/02-Lenguajes-Programacion/Python/Django.md
+        - Scripts: DEVELOP/02-Lenguajes-Programacion/Python/Scripts.md
+      - HTML-CSS:
+        - HTML5: DEVELOP/02-Lenguajes-Programacion/HTML-CSS/HTML5.md
+        - CSS3: DEVELOP/02-Lenguajes-Programacion/HTML-CSS/CSS3.md
+        - Responsive: DEVELOP/02-Lenguajes-Programacion/HTML-CSS/Responsive.md
+      - SQL:
+        - PostgreSQL: DEVELOP/02-Lenguajes-Programacion/SQL/PostgreSQL.md
+        - MySQL: DEVELOP/02-Lenguajes-Programacion/SQL/MySQL.md
+        - SQL-Server: DEVELOP/02-Lenguajes-Programacion/SQL/SQL-Server.md
+        - Oracle: DEVELOP/02-Lenguajes-Programacion/SQL/Oracle.md
+        - SQLite: DEVELOP/02-Lenguajes-Programacion/SQL/SQLite.md
+    - Proyectos: DEVELOP/proyectos/index.md      
+    - Referencias: DEVELOP/referencias/index.md       
+    - Herramientas: DEVELOP/herramientas/index.md      
+  - 👤 PERSONAL:
+    - Películas & Series: PERSONAL/Peliculas-Series/
+    - Libros & Lecturas: PERSONAL/Libros-Lecturas/
+    - Videojuegos: PERSONAL/Videojuegos/
+    - Hobbies: PERSONAL/Hobbies/
+  - 💪 SALUD:
+    - Fitness & Ejercicio: SALUD/Fitness-Ejercicio/
+    - Nutrición: SALUD/Nutricion/
+    - Mental & Bienestar: SALUD/Mental-Bienestar/
+    - Médico & Seguro: SALUD/Medico-Seguro/
+  - 📊 PRODUCTIVIDAD:
+    - Metas & Objetivos: PRODUCTIVIDAD/Metas-Objetivos/
+    - Tiempo & Calendario: PRODUCTIVIDAD/Tiempo-Calendario/
+    - Finanzas Personales: PRODUCTIVIDAD/Finanzas-Personales/
+    - Aprendizaje: PRODUCTIVIDAD/Aprendizaje/
+  - 🌎 CONOCIMIENTO:
+    - Ciencia & Tecnología: CONOCIMIENTO/Ciencia-Tecnologia/
+    - Historia & Cultura: CONOCIMIENTO/Historia-Cultura/
+    - Filosofía & Pensamiento: CONOCIMIENTO/Filosofia-Pensamiento/
+    - Idiomas & Viajes: CONOCIMIENTO/Idiomas-Viajes/
 
 extra:
   social:
