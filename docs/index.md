@@ -174,12 +174,24 @@ Esta wiki está abierta a contribuciones. Si tienes conocimiento que compartir:
 </div>
 
 <script>
-  // Simple search functionality
+  // Custom search functionality that integrates with MkDocs Material search
   document.getElementById('search-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-      const query = this.value;
+      const query = this.value.trim();
       if (query) {
-        window.location.href = '/search?q=' + encodeURIComponent(query);
+        // Trigger MkDocs Material's built-in search modal
+        const searchInput = document.querySelector('.md-search__input');
+        if (searchInput) {
+          // Set the search query in the built-in search input
+          searchInput.value = query;
+          // Trigger input event to activate search
+          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+          // Focus the search input to show results
+          searchInput.focus();
+        } else {
+          // Fallback: try to open search page if it exists
+          window.location.href = '/search/?q=' + encodeURIComponent(query);
+        }
       }
     }
   });
@@ -187,3 +199,4 @@ Esta wiki está abierta a contribuciones. Si tienes conocimiento que compartir:
   // Set last updated date
   document.getElementById('last-updated').textContent = new Date().toLocaleDateString('es-ES');
 </script>
+</div>
