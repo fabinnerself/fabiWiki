@@ -3,7 +3,7 @@ title: Sistemas operativos
 description: Utilidades, recursos y herramientas de desarrollo
 ---
 
-# 🛠️ Develop
+# 🛠️ Sistemas Operativos
 
 Colección de herramientas, utilidades y recursos útiles para el desarrollo de software. Esta sección incluye tanto herramientas que uso regularmente como recomendaciones para diferentes casos de uso.
 
