@@ -613,3 +613,451 @@ sudo systemctl restart docker
   ```
   // Espacio para sitios y configuración Brave
   ```
+---
+
+## 🤖 11. Clientes AI & Desarrollo
+
+Integración de APIs de inteligencia artificial para aplicaciones web y móviles. Incluye configuración, autenticación, clientes AI (droid, claude cli, etc) y ejemplos prácticos de implementación.
+
+---
+### Droid 
+**Site:** https://app.factory.ai
+
+**Comando:** droid (powershield/terminal)
+
+**modelo:** claude 4.5
+
+**Video:** https://youtu.be/AZ5HWtIdXO0?list=PL9tsMgfzMiMK7jbX0DZF57cy4gDR0Lm1m
+
+### qwen
+
+**Comando:** qwen (powershield/terminal)
+
+### Gemini
+
+**Comando:** gemini (powershield/terminal)
+
+
+### Roo Code
+**Api Porvider:** Roo Code Cloud
+
+**Model:** Deepseek/depseek-chat-v3.1 | xai/grok-code-fast-1 
+
+### Kilo
+**Api Provider:** Qwen code
+
+**Oauth credentials Path:** ~/.qwen/oauth_creds.json
+
+**Model:** qwen3-coder-plus
+
+
+### Agentrouter en RooCode/Kilo
+**Site:** https://agentrouter.org
+
+**Proveedor de API:** OpenAI COmpatible
+
+**URl Base:** https://agentrouter.org/V1
+
+**Model:** CaludeCode4.5 
+
+**Video:** https://youtu.be/JoeInjyhMo8?list=PL9tsMgfzMiMK7jbX0DZF57cy4gDR0Lm1m
+
+### Kawaipilot en RooCode/Kilo
+
+**Site:** https://openrouter.ai/kwaipilot/kat-coder-pro:free
+
+**Proveedor de API:** OpenAI COmpatible
+
+**URl Base:** https://openrouter.ai/api/v1
+
+**Model:** kwaipilot/kat-coder-pro:free 
+
+## Gemini
+
+**Site:** https://aistudio.google.com/api-keys
+
+**Proveedor de API:** Google Gemini
+
+**Modelo:** gemini-2.5-pro
+
+
+### OpenAI API
+**Plataforma de modelos de lenguaje de OpenAI**
+
+- **openai-api-config.js**
+  
+  ```javascript
+  // Configuración básica de OpenAI API
+  const { OpenAI } = require('openai');
+  
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+    organization: process.env.OPENAI_ORG_ID
+  });
+  
+  // Ejemplo de completación de chat
+  async function chatCompletion(messages) {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: messages,
+      max_tokens: 1000,
+      temperature: 0.7
+    });
+    
+    return completion.choices[0].message.content;
+  }
+  ```
+
+- **openai-embedding-example.py**
+  
+  ```python
+  # Ejemplo de embeddings con OpenAI
+  import openai
+  import numpy as np
+  
+  openai.api_key = os.getenv("OPENAI_API_KEY")
+  
+  def get_embedding(text, model="text-embedding-ada-002"):
+    response = openai.embeddings.create(
+      input=text,
+      model=model
+    )
+    return response.data[0].embedding
+  
+  # Uso
+  embedding = get_embedding("Hola mundo")
+  print(f"Vector de dimensión: {len(embedding)}")
+  ```
+
+---
+
+### Anthropic Claude API
+**Modelos de lenguaje conversacional de Anthropic**
+
+- **anthropic-setup.ts**
+  
+  ```typescript
+  // Configuración de Anthropic Claude
+  import Anthropic from '@anthropic-ai/sdk';
+  
+  const anthropic = new Anthropic({
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  });
+  
+  // Ejemplo de mensaje
+  async function sendMessageToClaude(prompt: string) {
+    const message = await anthropic.messages.create({
+      model: "claude-3-sonnet-20240229",
+      max_tokens: 1024,
+      messages: [
+        { role: "user", content: prompt }
+      ]
+    });
+    
+    return message.content[0].text;
+  }
+  ```
+
+- **claude-streaming.js**
+  
+  ```javascript
+  // Streaming de respuestas con Claude
+  const { Anthropic } = require('@anthropic-ai/sdk');
+  
+  async function streamClaudeResponse(prompt) {
+    const stream = await anthropic.messages.create({
+      model: "claude-3-opus-20240229",
+      max_tokens: 1024,
+      messages: [{ role: "user", content: prompt }],
+      stream: true
+    });
+  
+    for await (const messageStreamEvent of stream) {
+      if (messageStreamEvent.type === 'content_block_delta') {
+        process.stdout.write(messageStreamEvent.delta.text);
+      }
+    }
+  }
+  ```
+
+---
+
+### Google Gemini API
+**Modelos multimodales de Google AI**
+
+- **gemini-config.js**
+  
+  ```javascript
+  // Configuración de Google Gemini
+  const { GoogleGenerativeAI } = require("@google/generative-ai");
+  
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  
+  // Ejemplo con texto
+  async function generateText(prompt) {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    return response.text();
+  }
+  
+  // Ejemplo con imágenes
+  async function analyzeImage(imageBuffer, prompt) {
+    const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+    const image = {
+      inlineData: {
+        data: imageBuffer.toString('base64'),
+        mimeType: 'image/jpeg'
+      }
+    };
+    
+    const result = await model.generateContent([prompt, image]);
+    return result.response.text();
+  }
+  ```
+
+---
+
+### Hugging Face Inference API
+**Acceso a modelos open-source de Hugging Face**
+
+- **huggingface-api.js**
+  
+  ```javascript
+  // Configuración de Hugging Face
+  const { HfInference } = require('@huggingface/inference');
+  
+  const hf = new HfInference(process.env.HUGGINGFACE_TOKEN);
+  
+  // Ejemplo de clasificación de texto
+  async function classifyText(text) {
+    const result = await hf.textClassification({
+      model: 'distilbert-base-uncased-finetuned-sst-2-english',
+      inputs: text
+    });
+    
+    return result[0];
+  }
+  
+  // Ejemplo de generación de texto
+  async function generateTextHF(prompt) {
+    const result = await hf.textGeneration({
+      model: 'gpt2',
+      inputs: prompt,
+      parameters: {
+        max_new_tokens: 100,
+        temperature: 0.9
+      }
+    });
+    
+    return result.generated_text;
+  }
+  ```
+
+---
+
+### Cohere API
+**Modelos de lenguaje para aplicaciones empresariales**
+
+- **cohere-integration.py**
+  
+  ```python
+  # Integración con Cohere API
+  import cohere
+  import os
+  
+  co = cohere.Client(os.getenv('COHERE_API_KEY'))
+  
+  # Generación de texto
+  def generate_with_cohere(prompt):
+    response = co.generate(
+      model='command',
+      prompt=prompt,
+      max_tokens=300,
+      temperature=0.7,
+      k=0,
+      p=0.75
+    )
+    
+    return response.generations[0].text
+  
+  # Embeddings
+  def get_cohere_embedding(text):
+    response = co.embed(
+      texts=[text],
+      model='embed-english-v3.0',
+      input_type='search_document'
+    )
+    
+    return response.embeddings[0]
+  ```
+
+---
+
+### Azure OpenAI Service
+**OpenAI en la nube de Azure**
+
+- **azure-openai-config.js**
+  
+  ```javascript
+  // Configuración de Azure OpenAI
+  const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
+  
+  const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+  const azureApiKey = process.env.AZURE_OPENAI_KEY;
+  const deploymentId = process.env.AZURE_DEPLOYMENT_ID;
+  
+  const client = new OpenAIClient(
+    endpoint, 
+    new AzureKeyCredential(azureApiKey)
+  );
+  
+  // Uso con Azure
+  async function azureChatCompletion(messages) {
+    const events = await client.getChatCompletions(
+      deploymentId,
+      messages,
+      { maxTokens: 800 }
+    );
+    
+    return events.choices[0].message.content;
+  }
+  ```
+
+---
+
+### Ejemplos de Integración Completa
+
+- **ai-chatbot-frontend.html**
+  
+  ```html
+  <!-- Frontend básico para chatbot con AI -->
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Chatbot con AI</title>
+    <style>
+      .chat-container { max-width: 600px; margin: 0 auto; }
+      .message { padding: 10px; margin: 5px; border-radius: 10px; }
+      .user { background: #007bff; color: white; text-align: right; }
+      .bot { background: #f1f1f1; text-align: left; }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div id="chat-messages"></div>
+      <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
+  
+    <script>
+      async function sendMessage() {
+        const input = document.getElementById('user-input');
+        const message = input.value;
+        
+        // Aquí integrarías con tu API de AI preferida
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: message })
+        });
+        
+        const data = await response.json();
+        displayMessage(data.response, 'bot');
+        input.value = '';
+      }
+      
+      function displayMessage(text, sender) {
+        const div = document.createElement('div');
+        div.className = `message ${sender}`;
+        div.textContent = text;
+        document.getElementById('chat-messages').appendChild(div);
+      }
+    </script>
+  </body>
+  </html>
+  ```
+
+- **api-backend-ai.js**
+  
+  ```javascript
+  // Backend Express.js para integración AI
+  const express = require('express');
+  const { OpenAI } = require('openai');
+  require('dotenv').config();
+  
+  const app = express();
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  
+  app.use(express.json());
+  
+  app.post('/api/chat', async (req, res) => {
+    try {
+      const { message } = req.body;
+      
+      const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [
+          { role: "system", content: "Eres un asistente útil." },
+          { role: "user", content: message }
+        ],
+        max_tokens: 150
+      });
+      
+      res.json({ response: completion.choices[0].message.content });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+  
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Servidor AI ejecutándose en puerto ${PORT}`);
+  });
+  ```
+
+---
+
+### Configuración de Variables de Entorno
+
+- **.env.example**
+  
+  ```env
+  # Configuración para APIs de AI
+  OPENAI_API_KEY=sk-tu-api-key-aqui
+  ANTHROPIC_API_KEY=tu-antropic-key-aqui
+  GEMINI_API_KEY=tu-gemini-key-aqui
+  HUGGINGFACE_TOKEN=tu-hf-token-aqui
+  COHERE_API_KEY=tu-cohere-key-aqui
+  
+  # Azure OpenAI
+  AZURE_OPENAI_ENDPOINT=https://tu-recurso.openai.azure.com
+  AZURE_OPENAI_KEY=tu-azure-key
+  AZURE_DEPLOYMENT_ID=tu-deployment-id
+  
+  # Configuración general
+  PORT=3000
+  NODE_ENV=development
+  ```
+
+---
+
+### Mejores Prácticas
+
+- **🔐 Seguridad**: Nunca commits las API keys en el código
+- **⚡ Rate Limiting**: Implementa límites de tasa para evitar costos excesivos
+- **📊 Logging**: Registra el uso de APIs para monitoreo y debugging
+- **🔄 Fallback**: Implementa estrategias de fallback para múltiples proveedores
+- **🧪 Testing**: Prueba con diferentes modelos y configuraciones
+
+---
+
+### Recursos Adicionales
+
+- [OpenAI Documentation](https://platform.openai.com/docs)
+- [Anthropic API Docs](https://docs.anthropic.com/claude/docs)
+- [Google AI Studio](https://makersuite.google.com/)
+- [Hugging Face Models](https://huggingface.co/models)
+- [Cohere Documentation](https://docs.cohere.com/)
+- [Azure OpenAI Docs](https://learn.microsoft.com/azure/ai-services/openai/)
+
