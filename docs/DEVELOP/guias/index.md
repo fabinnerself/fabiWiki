@@ -707,7 +707,9 @@ Prompts utiles para desarollo
 
 ---
 ### Figma Make
-Se debe incluier el paste de elementos de figma al principo del prompt.
+1 En figma ir a Archivo -> Nuevo -> Make
+2 En make hacer paste con el elemento de diseño a migrar al principo del prompt mas el prompt. 
+
 ```
 (pasted figma element)convertir este diseño en pixel perfect react app usando tailwind ccs. Considerar 1 que los elementos con refijo btn_(primary/secondary/terciary) seran botones. 2 que los elementos con prefijo card_ son tarjetas. 4 los elementos con prefijo link_ son links a la misma pagina y secciones 4 el codigo generado debe ser responsivo
 ``` 
