@@ -695,8 +695,20 @@ $env:ANTHROPIC_API_KEY="sk-xxx"
 ```
 
 o Editar variables de entorno 
+
 **Comando:** claude  (powershield/terminal)
+
 **Video:** https://youtu.be/rmPNO_9UH_0
  
 
+## 🤖 12. prompts
 
+Prompts utiles para desarollo
+
+---
+### Figma Make
+(incluido el paste de elementos de figma)
+```
+convertir este diseño en pixel perfect react app usando tailwind ccs. Considerar 1 que los elementos con refijo btn_(primary/secondary/terciary) seran botones. 2 que los elementos con prefijo card_ son tarjetas. 4 los elementos con prefijo link_ son links a la misma pagina y secciones 4 el codigo generado debe ser responsivo
+``` 
+---
