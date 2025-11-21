@@ -708,10 +708,16 @@ Prompts utiles para desarollo
 ---
 ### Figma Make
 1 En figma ir a Archivo -> Nuevo -> Make
+
 2 En make hacer paste con el elemento de diseño a migrar al principo del prompt mas el prompt. 
 
+V1
 ```
 (pasted figma element)convertir este diseño en pixel perfect react app usando tailwind ccs. Considerar 1 que los elementos con refijo btn_(primary/secondary/terciary) seran botones. 2 que los elementos con prefijo card_ son tarjetas. 4 los elementos con prefijo link_ son links a la misma pagina y secciones 4 el codigo generado debe ser responsivo
+``` 
+v2
+```
+(pasted figma elements)convertir este diseño en pixel perfect react app usando tailwind ccs. Considerar 1 que los elementos con refijo btn_(primary/secondary/terciary) seran botones. 2 que los elementos con prefijo card_ son tarjetas. 4 los elementos con prefijo link_ son links a la misma pagina y secciones 5 elemento con prefijo faq_ corresponden a una seccion de prguntas frecuentes 6 elem prefij img_  si imagenes 7 elem prefijo drag_drop imput drang and drop para carga de archivos 8 elem prefij text_ imput para exto 9 elem prefij combobox_ inputs combobox con dos elementos  10 los 2 diseños tiene mismos header y footers volver componentes 11 los links internos del footer y header del formulario deberian ir a landing page  11 el codigo generado debe ser responsivo
 ``` 
 ---
 **video fuente:** https://youtu.be/2PP-3l4LfbM
