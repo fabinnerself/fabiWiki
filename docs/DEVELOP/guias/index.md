@@ -918,8 +918,23 @@ tener 3 registros de prubea popular la bd con datos de relleno en la primera car
 
 ```
  
-## Util pompts
+### Util pompts
 
 https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git
 
-fin 
+ 
+
+
+### github programing
+
+https://github.com/EbookFoundation/free-programming-books.git
+
+https://github.com/microsoft/Web-Dev-For-Beginners
+
+https://github.com/practical-tutorials/project-based-learning.git
+
+https://github.com/ashishps1/awesome-leetcode-resources.git
+
+https://github.com/sindresorhus/awesome.git
+
+fin
