@@ -725,7 +725,7 @@ v2
 ---
 ### Notebook organizer 
 
-Aplicacon fulstack probada con modelos AI claude, qwen-cli, roocode (xai/grok-code-fast-1), copilot, amp, roocode(kwaipilot/kat-coder-pro:free) 
+Aplicación fulstack probada con modelos AI claude, qwen-cli, roocode (xai/grok-code-fast-1), copilot, amp, roocode(kwaipilot/kat-coder-pro:free) 
 
 ```
 **Nombre de la Aplicación:** Note Organizer (Full-Stack)
@@ -917,5 +917,9 @@ solicitud inicial:
 tener 3 registros de prubea popular la bd con datos de relleno en la primera carga
 
 ```
+ 
+## Util pompts
 
-fin
+https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git
+
+fin 
