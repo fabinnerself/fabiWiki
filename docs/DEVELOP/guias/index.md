@@ -945,4 +945,10 @@ fin
 
 https://coolify.io/docs/get-started/installation
 
+### 14. visual studio extensions
+- a) Rest API
+
+  ![Rest API](rest_api_img.png)
+
+
 fin
