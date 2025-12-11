@@ -700,6 +700,18 @@ o Editar variables de entorno
 
 **Video:** https://youtu.be/rmPNO_9UH_0
  
+### opencode
+
+**Site:** https://opencode.ai/workspace/wrk_01KC5FRWXH2XNHEK4VEFCVYATN/keys
+
+**Comando:** opencode  (powershield/terminal)
+
+**Video:** [youtube](https://youtu.be/e9j2iEwJru0)
+
+**Modelo:** Grok Code Fast 1 OpenCode Zen
+
+**Info util** opencode auth login -> elegir (opencode zen)
+
 
 ## 🤖 12. prompts
 
@@ -946,7 +958,7 @@ fin
 https://coolify.io/docs/get-started/installation
 
 ### 14. visual studio extensions
-- a) Rest API
+- Rest API
 
   ![Rest API](rest_api_img.png)
 
