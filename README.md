@@ -2,6 +2,8 @@
 
 Una wiki personal construida con MkDocs y Material Theme, inspirada en el diseño de Wikipedia. Esta wiki está diseñada para almacenar, organizar y compartir conocimiento personal de manera estructurada y accesible.
 
+Puedes visitar la plataforma en : https://fabi-wiki-xdqd.vercel.app/
+
 ## 🚀 Características
 
 - **Diseño Wikipedia-like**: Inspirado en la interfaz de Wikipedia con navegación intuitiva
