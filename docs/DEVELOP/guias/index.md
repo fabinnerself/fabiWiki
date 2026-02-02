@@ -620,10 +620,11 @@ sudo systemctl restart docker
 Integración de APIs de inteligencia artificial para aplicaciones web y móviles. Incluye configuración, autenticación, clientes AI (droid, claude cli, etc) y ejemplos prácticos de implementación.
 
 ---
-### Droid 
-**Site:** https://app.factory.ai
+### Droid rovodev 
 
-**Comando:** droid (powershield/terminal)
+**Site API :** https://id.atlassian.com/manage-profile/security/api-tokens
+
+**Comando:** droid / acli rovodev run (powershield/terminal) 
 
 **modelo:** claude 4.5
 
@@ -936,7 +937,6 @@ https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git
 
  
 
-
 ### github programing
 
 https://github.com/EbookFoundation/free-programming-books.git
@@ -957,10 +957,20 @@ fin
 
 https://coolify.io/docs/get-started/installation
 
+**CheatSheets**
+**SQL**
+![SQL](sql_cheat.jpg)
+
+**RJ45**
+![RJ-45](rj45.jpg)
+
+
+
 ### 14. visual studio extensions
 - Rest API
 
   ![Rest API](rest_api_img.png)
-
+- Live Server 
+  ![Live server](live_serv.png) 
 
 fin
