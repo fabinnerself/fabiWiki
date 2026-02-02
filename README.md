@@ -61,6 +61,10 @@ docker-compose up --build
 2. **Configuración automática**: Vercel detectará automáticamente la configuración
 3. **Despliegue**: Cada push a `main` desplegará automáticamente
 
+### Solución de Problemas Comunes
+
+Si experimentas errores de tipo `externally-managed-environment` o `PEP 668` en Vercel, el archivo `vercel.json` ya ha sido configurado con la solución apropiada. El comando de construcción incluye `--break-system-packages` para resolver este problema común en entornos Python modernos.
+
 ## 📝 Creando Contenido
 
 ### Estructura de Páginas

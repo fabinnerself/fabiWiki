@@ -713,6 +713,11 @@ o Editar variables de entorno
 
 **Info util** opencode auth login -> elegir (opencode zen)
 
+aux kilo/roocode
+https://agentrouter.org/console/token
+https://docs.agentrouter.org/en/roocode.html
+
+
 
 ## 🤖 12. prompts
 

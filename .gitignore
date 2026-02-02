@@ -1,0 +1,22 @@
+# MkDocs generated files
+/site/
+/.cache/
+/.pytest_cache/
+*.pyc
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
