@@ -2,7 +2,6 @@
 title: Sistemas operativos
 description: Utilidades, recursos y herramientas de desarrollo
 ---
-
 # 🛠️ Sistemas Operativos
 
 Colección de herramientas, utilidades y recursos útiles para el desarrollo de software. Esta sección incluye tanto herramientas que uso regularmente como recomendaciones para diferentes casos de uso.
@@ -12,13 +11,17 @@ Colección de herramientas, utilidades y recursos útiles para el desarrollo de 
 ### Editores-Codigo
 
 #### Visual-Studio-Code
+
 **Mi editor principal**
+
 - **Extensiones esenciales**: Python, Pylance, Prettier, ESLint
 - **Configuración**: settings.json personalizado con temas y atajos
 - **Ventajas**: Ligero, extensible, integración Git excelente
 
 #### Vim-Neovim
+
 **Para edición rápida en terminal**
+
 - **Plugins**: vim-plug, coc.nvim, fzf
 - **Configuración**: init.vim con mappings personalizados
 - **Uso**: Edición rápida, servidores remotos
@@ -26,7 +29,9 @@ Colección de herramientas, utilidades y recursos útiles para el desarrollo de 
 ### Terminales-Shells
 
 #### Windows-Terminal-PowerShell
+
 **Configuración actual**
+
 ```json
 {
   "profiles": {
@@ -40,7 +45,9 @@ Colección de herramientas, utilidades y recursos útiles para el desarrollo de 
 ```
 
 #### Oh-My-Zsh
+
 **Para desarrollo en Linux**
+
 - **Plugins**: git, docker, python, node
 - **Tema**: agnoster o powerlevel10k
 - **Aliases**: Personalizados para tareas comunes
@@ -48,7 +55,9 @@ Colección de herramientas, utilidades y recursos útiles para el desarrollo de 
 ### Configuraciones
 
 #### Dotfiles
+
 **Mi configuración en GitHub**
+
 ```bash
 git clone https://github.com/tuusuario/dotfiles
 cd dotfiles
@@ -56,7 +65,9 @@ cd dotfiles
 ```
 
 #### Scripts-Utiles
+
 **Automatización personal**
+
 ```bash
 # Backup de proyectos
 #!/bin/bash
@@ -73,7 +84,9 @@ pip install -r requirements.txt
 ## 🔧 02-Control-Versiones
 
 ### Git
+
 **Configuración básica**
+
 ```bash
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu@email.com"
@@ -82,6 +95,7 @@ git config --global init.defaultBranch main
 ```
 
 ### GitHub
+
 - **GitHub CLI**: `gh` para interactuar con repositorios
 - **GitHub Desktop**: Para usuarios que prefieren GUI
 - **Actions**: CI/CD automatizado
@@ -89,7 +103,9 @@ git config --global init.defaultBranch main
 ## 🐳 03-Containerizacion
 
 ### Docker-Desktop
+
 **Para desarrollo local**
+
 - **Configuración**: 4GB RAM, WSL2 backend
 - **Extensiones**: Docker VS Code extension
 - **Comandos frecuentes**:
@@ -100,7 +116,9 @@ git config --global init.defaultBranch main
   ```
 
 ### Docker-Compose
+
 **Para entornos multi-contenedor**
+
 ```yaml
 version: '3.8'
 services:
@@ -117,13 +135,17 @@ services:
 ## 🗄️ 04-Bases-Datos
 
 ### PostgreSQL
+
 **Base de datos principal**
+
 - **Cliente**: pgAdmin o DBeaver
 - **Extensiones**: PostGIS para datos geoespaciales
 - **Backup**: pg_dump y pg_restore
 
 ### MongoDB
+
 **Para datos NoSQL**
+
 - **Cliente**: MongoDB Compass
 - **Atlas**: Servicio cloud de MongoDB
 - **Drivers**: pymongo para Python
@@ -131,13 +153,17 @@ services:
 ## 🌐 05-APIs-Servicios-Web
 
 ### Postman-Insomnia
+
 **Testing de APIs**
+
 - **Colecciones**: Organizadas por proyecto
 - **Environment**: Variables por entorno (dev, staging, prod)
 - **Tests**: Scripts para validar respuestas
 
 ### HTTPie
+
 **Cliente HTTP desde terminal**
+
 ```bash
 http GET https://api.example.com/users
 http POST https://api.example.com/users name=John email=john@example.com
@@ -148,13 +174,17 @@ http POST https://api.example.com/users name=John email=john@example.com
 ### Logging
 
 #### ELK-Stack
+
 **Elasticsearch, Logstash, Kibana**
+
 - **Filebeat**: Recolección de logs
 - **Logstash**: Procesamiento
 - **Kibana**: Visualización
 
 #### Sentry
+
 **Error tracking**
+
 - **SDKs**: Disponible para múltiples lenguajes
 - **Integraciones**: GitHub, Slack
 - **Alerts**: Notificaciones automáticas
@@ -162,13 +192,17 @@ http POST https://api.example.com/users name=John email=john@example.com
 ### Debugging
 
 #### VS-Code-Debugger
+
 **Para la mayoría de lenguajes**
+
 - **Configuraciones**: launch.json por proyecto
 - **Breakpoints**: Condicionales y de función
 - **Variables**: Inspección en tiempo real
 
 #### Browser-DevTools
+
 **Para desarrollo web**
+
 - **Network**: Análisis de requests
 - **Console**: JavaScript debugging
 - **Application**: Storage y cache inspection
@@ -178,19 +212,25 @@ http POST https://api.example.com/users name=John email=john@example.com
 ### Cloud-Providers
 
 #### Vercel
+
 **Para aplicaciones frontend/static**
+
 - **Configuración**: vercel.json
 - **Functions**: Serverless functions
 - **Analytics**: Integrado
 
 #### Heroku
+
 **PaaS completo**
+
 - **Dynos**: Contenedores gestionados
 - **Add-ons**: Bases de datos, caching
 - **Pipelines**: Review apps
 
 #### DigitalOcean
+
 **VPS y servicios gestionados**
+
 - **Droplets**: VPS configurables
 - **App Platform**: PaaS similar a Heroku
 - **Spaces**: Almacenamiento S3-compatible
@@ -198,7 +238,9 @@ http POST https://api.example.com/users name=John email=john@example.com
 ### CI-CD
 
 #### GitHub-Actions
+
 **CI/CD integrado con GitHub**
+
 ```yaml
 name: CI/CD
 on: [push, pull_request]
@@ -212,7 +254,9 @@ jobs:
 ```
 
 #### GitLab-CI
+
 **Para proyectos en GitLab**
+
 - **Runners**: Compartidos o dedicados
 - **Environments**: Staging y production
 - **Security**: Container scanning
@@ -222,13 +266,17 @@ jobs:
 ### Gestion-Tareas
 
 #### Notion
+
 **Base de conocimiento y tareas**
+
 - **Databases**: Para tracking de proyectos
 - **Templates**: Para documentación consistente
 - **Integrations**: Slack, GitHub
 
 #### Trello-Jira
+
 **Kanban boards**
+
 - **Workflows**: Personalizables
 - **Automation**: Reglas automáticas
 - **Integrations**: GitHub, Slack
@@ -236,13 +284,17 @@ jobs:
 ### Comunicacion
 
 #### Slack
+
 **Comunicación del equipo**
+
 - **Canales**: Organizados por proyecto/tema
 - **Integrations**: GitHub, CI/CD, monitoring
 - **Apps**: Para automatización
 
 #### Discord
+
 **Comunidades y soporte**
+
 - **Servidores**: Por tecnología o proyecto
 - **Bots**: Para automatización
 - **Voz**: Para pair programming
@@ -252,13 +304,17 @@ jobs:
 ### Autenticacion
 
 #### Auth0
+
 **Gestión de identidad**
+
 - **Social login**: Google, GitHub, etc.
 - **MFA**: Autenticación multifactor
 - **SSO**: Single sign-on
 
 #### JWT-io
+
 **Debugger para JWT tokens**
+
 - **Encode/Decode**: Tokens JWT
 - **Verification**: Firma y claims
 - **Libraries**: Para múltiples lenguajes
@@ -266,13 +322,17 @@ jobs:
 ### Seguridad-Aplicaciones
 
 #### OWASP-ZAP
+
 **Security testing**
+
 - **Scanner**: Automático de vulnerabilidades
 - **Proxy**: Interceptación de requests
 - **Scripts**: Testing personalizado
 
 #### Snyk
+
 **Vulnerability scanning**
+
 - **Dependencies**: En package.json, requirements.txt
 - **Containers**: En imágenes Docker
 - **Integrations**: CI/CD pipelines
@@ -282,13 +342,17 @@ jobs:
 ### Herramientas-Diseno
 
 #### Figma
+
 **Design system y prototipado**
+
 - **Components**: Reutilizables
 - **Auto-layout**: Constraints automáticos
 - **Plugins**: Para desarrollo
 
 #### Penpot
+
 **Open source alternative**
+
 - **Components**: Sistema de diseño
 - **Prototyping**: Interacciones
 - **Collaboration**: Tiempo real
@@ -296,13 +360,17 @@ jobs:
 ### Accesibilidad
 
 #### WAVE
+
 **Evaluación de accesibilidad**
+
 - **Chrome Extension**: Análisis automático
 - **Contrast**: Checker de colores
 - **Guidelines**: WCAG compliance
 
 #### axe-DevTools
+
 **Testing de accesibilidad**
+
 - **API**: Para integración en CI
 - **Reports**: Detallados con soluciones
 - **Standards**: WCAG 2.1 AA
@@ -312,13 +380,17 @@ jobs:
 ### Plataformas-Aprendizaje
 
 #### freeCodeCamp
+
 **Aprendizaje práctico**
+
 - **Certificaciones**: Por tecnología
 - **Proyectos**: Portfolio building
 - **Comunidad**: Foro activo
 
 #### Codecademy
+
 **Cursos interactivos**
+
 - **Paths**: Carreras guiadas
 - **Practice**: Entorno integrado
 - **Mobile**: Aprendizaje en móvil
@@ -326,13 +398,17 @@ jobs:
 ### Comunidades
 
 #### Stack-Overflow
+
 **Preguntas y respuestas**
+
 - **Tags**: Por tecnología
 - **Reputation**: Sistema de puntos
 - **Jobs**: Ofertas de trabajo
 
 #### Dev-to
+
 **Blogging y comunidad**
+
 - **Artículos**: Tutoriales y experiencias
 - **Tags**: Trending topics
 - **Connect**: Red de developers
@@ -352,4 +428,48 @@ jobs:
 - **Para equipos**: Slack + Jira + GitHub
 - **Para startups**: Vercel + PlanetScale + Sentry
 - **Para enterprise**: AWS + Terraform + Kubernetes
+
+## 🛠️ Herramientas de Mantenimiento Windows
+
+### 🔧 **SFC (System File Checker)**
+
+**Descripción:**
+Examina la integridad de todos los archivos protegidos del sistema Windows y reemplaza las versiones incorrectas, dañadas o modificadas con versiones correctas de Microsoft.
+
+**Comando básico:**
+
+```bash
+sfc /scannow
+```
+
+**💡 Casos de uso:**
+
+- ✅ Pantallazos azules
+- ✅ Aplicaciones que fallan al iniciar
+- ✅ Archivos DLL corruptos o faltantes
+- ✅ Después de infecciones de malware
+- ✅ Problemas de rendimiento inexplicables
+
+**⚠️ Importante:**
+
+- Ejecutar como **ADMINISTRADOR**
+- El proceso puede durar 10-15 minutos
+- Reiniciar después de la reparación
+
+---
+
+### 🔄 **DISM (Complemento recomendado)**
+
+Cuando SFC no puede reparar archivos, ejecutar antes:
+
+```bash
+DISM /Online /Cleanup-Image /RestoreHealth
+```
+
+**Secuencia completa recomendada:**
+
+```bash
+1. DISM /Online /Cleanup-Image /RestoreHealth
+2. sfc /scannow
+3. Reiniciar sistema
 ```
