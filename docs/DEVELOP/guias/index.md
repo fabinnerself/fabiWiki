@@ -630,6 +630,16 @@ Integración de APIs de inteligencia artificial para aplicaciones web y móviles
 
 **Video:** https://youtu.be/AZ5HWtIdXO0?list=PL9tsMgfzMiMK7jbX0DZF57cy4gDR0Lm1m
 
+### Claude
+
+**Site API** https://openrouter.ai/settings/keys 
+
+**Comando** claude (powershield/terminal)
+
+**Modelo**  Claude Opus 4.6, the openrouter/free model.
+
+**Video** https://youtu.be/GRUjApPqCoE
+
 ### qwen
 
 **Comando:** qwen (powershield/terminal)
